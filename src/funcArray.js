@@ -20,7 +20,7 @@ export function findLongestWord(list){
     }
 }
 
-export function sumArray(list){
+/* export function sumArray(list){
     let sum = 0;
     for(let i = 0; i < list.length; i++){
         sum += list[i];
@@ -29,8 +29,29 @@ export function sumArray(list){
 	console.log("total: " + sum);
 	return sum;
 }
+ */
 
-export function averageNumbers(){}
+// bonus: using reduce()
+export function sumArray(list){
+    if(list.length < 1){
+        return 0;
+    } else {
+    let sum = list.reduce((a, b) => a + b);
+    console.log(sum);
+	return sum;
+    }
+}
+
+export function averageNumbers(list){
+    if(list.length < 2){
+        return list[0];
+    } else {
+	let sum = list.reduce((a, b) => a + b);
+	sum = sum / list.length;
+	console.log("average: " + sum)
+	return sum;
+    }
+}
 
 export function averageWordLength(){}
 

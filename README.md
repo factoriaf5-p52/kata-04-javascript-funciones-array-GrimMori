@@ -92,8 +92,6 @@ Semanticamente [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 Para ello, utiliza la función suma del ejercicio anterior aplicando la división por el número de elementos.
 
-#### 4.1: Array de Números
-
 Escribe una función `averageNumbers` que reciba un array de números y calcule la media de los números:
 
 **Puedes usar el siguiente array para probar tu función**
@@ -103,7 +101,7 @@ Escribe una función `averageNumbers` que reciba un array de números y calcule 
 let numbers = [2, 6, 9, 10, 7, 4, 1, 9];
 ```
 
-#### 4.2: Array of Strings
+#### 5: Array of Strings
 
 Escribe una función `averageWordLength` que reciba un array de palabras y calcule la media de la longitud de las palabras:
 
@@ -124,7 +122,7 @@ let words = [
 ];
 ```
 
-### 5. Unique Arrays
+### 6. Unique Arrays
 
 Realiza este ejercicio como una función `uniquifyArray` que reciba un array de palabras como parámetro.
 
@@ -151,7 +149,7 @@ let words = [
 
 ```
 
-### 6. Busca elementos
+### 7. Busca elementos
 
 Escribe una función `doesWordExist` que reciba un array de palabras como argumento y una palabra para buscar dentro del array. Devuelve `true` si existe y si no, devuelve `false`. **No** utilices `indexOf` en este caso.
 
@@ -170,7 +168,7 @@ let words = [
 ];
 ```
 
-### 7. Cuenta repeticiones
+### 8. Cuenta repeticiones
 
 Escribe una función `howManyTimes` que tome dos argumentos: un array de palabras y una palabra para buscar dentro del array. La función devolverá el número de veces que una palabra aparece en el array.
 
@@ -192,7 +190,7 @@ let words = [
 ];
 ```
 
-### X. Bonus Quest
+### 9. Bonus Quest
 
 Cual es el producto mayor de cuatro números adyacentes? Consideramos adyacentes cualquier grupo de cuatro números en `horizontal`, `vertical` o `diagonal`.
 
