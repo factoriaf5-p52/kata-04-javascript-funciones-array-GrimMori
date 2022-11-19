@@ -20,12 +20,26 @@ export function findLongestWord(list){
     }
 }
 
-export function sumArray(){}
+export function sumArray(list){
+    let sum = 0;
+    for(let i = 0; i < list.length; i++){
+        sum += list[i];
+		console.log(sum);
+    }
+	console.log("total: " + sum);
+	return sum;
+}
+
 export function averageNumbers(){}
+
 export function averageWordLength(){}
+
 export function uniquifyArray(){}
+
 export function doesWordExist(){}
+
 export function howManyTimes(){}
+
 export function greatestProduct(){}
 
 
