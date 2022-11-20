@@ -62,20 +62,80 @@ export function averageWordLength(list){
 		let lengthofwords = [];
 		for (let i = 0; i < list.length; i++){
 			lengthofwords.push(list[i].length);
-			console.log((i+1) + ": " + lengthofwords[i])
+			// console.log((i+1) + ": " + lengthofwords[i])
 		}
 		let sum = lengthofwords.reduce((a, b) => a + b);
 		sum = sum / list.length;
-		console.log("average length of words: " + sum);
+		// console.log("average length of words: " + sum);
 		return sum;
     }
 }
 
-export function uniquifyArray(){}
+export function uniquifyArray(list){
+	let o_length = list.length;
+	let sorted;
+    // if the array only has 1 element, return the whole array
+	if(list.length == 1){
+		return list;
 
-export function doesWordExist(){}
+    // if the array is empty, return undefined
+	} else if(list.length < 1){
+        return list[0];
 
-export function howManyTimes(){}
+    // if the array has multiple elements, uniquify
+    } else {
+		console.log("input: \n" + list + "\n");
+		sorted = list.sort(); // new sorted array
+		let i;
+		for(let i = 0; i < sorted.length; i++){
+			if(sorted[i] == sorted[i+1]){ // if index is same as next index
+				sorted.splice(i, 1, ""); // replace index with empty
+			}
+		}
+        // sort by length so empty values move to the beginning of the array
+		sorted.sort((a, b) => a.length - b.length); 
+		for(let i = 0; i < sorted.length; i++){
+			if(sorted[0] == ""){
+				sorted.shift(); // remove empty values
+			}
+			// console.log("LOG input length: " + list.length);
+		}
+		console.log("input length: " + o_length);
+		console.log("sorted length: " + sorted.length);
+        // if length of the array has not changed we should return 
+        // the original unmodified list, without sorting
+		if(sorted.length == o_length){ 
+			console.log("output: \n" + list + "\n\n\n");
+			return list;
+		} else {
+			console.log("output: \n" + sorted + "\n\n\n\n");
+			return sorted;
+		}
+	}
+}
+
+export function doesWordExist(list, word){
+    if(list.includes(word) && list.length > 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+export function howManyTimes(list, word){
+    let count = 0;
+    if(list.length < 1){
+		return undefined;
+	} else {
+    for(let i = 0; i < list.length; i++){
+        if(word === list[i]){
+            count++;
+        }
+    }
+    console.log("word count: " + count);
+    return count;
+    }
+}
 
 export function greatestProduct(){}
 
