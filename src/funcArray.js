@@ -70,6 +70,7 @@ export function averageWordLength(list){
 		return sum;
     }
 }
+/* first try. does not work properly
 
 export function uniquifyArray(list){
 	let o_length = list.length;
@@ -80,7 +81,7 @@ export function uniquifyArray(list){
 
     // if the array is empty, return undefined
 	} else if(list.length < 1){
-        return list[0];
+        return undefined;
 
     // if the array has multiple elements, uniquify
     } else {
@@ -112,6 +113,23 @@ export function uniquifyArray(list){
 			return sorted;
 		}
 	}
+}
+ */
+
+export function uniquifyArray(list){
+    if(list.length == 1){
+		return list;
+	} else if(list.length < 1){
+        return undefined;
+    } else {
+    let uniquified = [...new Set(list)];
+        if(uniquified.length == list.length){ 
+            return list;
+        } else {
+            // console.log(uniquified);
+            return uniquified;
+        }
+    }
 }
 
 export function doesWordExist(list, word){
