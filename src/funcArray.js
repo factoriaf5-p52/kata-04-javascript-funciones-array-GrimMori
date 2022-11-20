@@ -15,7 +15,7 @@ export function findLongestWord(list){
         return list[0];
     } else {
         list.sort((a, b) => b.length - a.length);
-        console.log(list[0])
+        // console.log(list[0])
         return list[0];
     }
 }
@@ -37,7 +37,7 @@ export function sumArray(list){
         return 0;
     } else {
     let sum = list.reduce((a, b) => a + b);
-    console.log(sum);
+    // console.log(sum);
 	return sum;
     }
 }
@@ -48,12 +48,28 @@ export function averageNumbers(list){
     } else {
 	let sum = list.reduce((a, b) => a + b);
 	sum = sum / list.length;
-	console.log("average: " + sum)
+	// console.log("average: " + sum)
 	return sum;
     }
 }
 
-export function averageWordLength(){}
+export function averageWordLength(list){
+    if(list.length < 1){
+		return undefined;
+    } else if(list.length == 1){
+        return list[0].length;
+	} else {
+		let lengthofwords = [];
+		for (let i = 0; i < list.length; i++){
+			lengthofwords.push(list[i].length);
+			console.log((i+1) + ": " + lengthofwords[i])
+		}
+		let sum = lengthofwords.reduce((a, b) => a + b);
+		sum = sum / list.length;
+		console.log("average length of words: " + sum);
+		return sum;
+    }
+}
 
 export function uniquifyArray(){}
 
